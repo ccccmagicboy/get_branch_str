@@ -32,7 +32,7 @@ jobs:
     
     - name: Get the string
       id: get_string
-      uses: ccccmagicboy/get_datetime@master
+      uses: ccccmagicboy/get_branch_str@master
       with:
         in_str: bugfix-2.0.x
 
