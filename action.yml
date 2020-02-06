@@ -1,0 +1,22 @@
+name: 'Get the datetime string'
+description: 'use it to get the datetime.'
+inputs:
+  tz1:
+    description: 'time zone of the datetime'
+    required: true
+    default: 'Asia'
+  tz2:
+    description: 'time zone of the datetime'
+    required: true
+    default: 'Shanghai'
+outputs:
+  datetime_str: #
+    description: 'date and time'
+runs:
+  using: 'node12'
+  main: 'action.js'
+branding:
+  icon: 'terminal'
+  color: 'green'
+
+

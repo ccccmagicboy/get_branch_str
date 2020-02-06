@@ -1,0 +1,47 @@
+#===================================================================================
+# Lisence: MIT
+# Author: ccccmagicboy
+# Url: https://ccrobot-online.com.cn
+#===================================================================================
+
+name: CI
+
+on: [push]
+
+env:
+  INPUT_TZ1: Asia
+  INPUT_TZ2: Shanghai
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os:
+        - windows-2016
+        - ubuntu-16.04
+  
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - name: Checkout this repos
+      uses: actions/checkout@v2
+      
+    - name: Check action.py itself
+      run: |
+        sh script.sh
+      shell: bash
+    
+    - name: Get the datetime
+      id: get_datetime
+      uses: ccccmagicboy/get_datetime@master
+      with:
+        tz1: 'Asia'
+        tz2: 'Shanghai'
+
+    - name: Print the datetime
+      run: |
+        echo ${{ steps.get_datetime.outputs.datetime_str }}
+      shell: bash
+        
+        
+        
