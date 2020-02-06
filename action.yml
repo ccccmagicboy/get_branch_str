@@ -1,17 +1,13 @@
-name: 'Get the datetime string'
-description: 'use it to get the datetime.'
+name: 'Get branch string'
+description: 'use it to get the string.'
 inputs:
-  tz1:
-    description: 'time zone of the datetime'
+  in_str:
+    description: 'input string'
     required: true
-    default: 'Asia'
-  tz2:
-    description: 'time zone of the datetime'
-    required: true
-    default: 'Shanghai'
+    default: 'xx.xx'
 outputs:
-  datetime_str: #
-    description: 'date and time'
+  str: #
+    description: 'output string'
 runs:
   using: 'node12'
   main: 'action.js'

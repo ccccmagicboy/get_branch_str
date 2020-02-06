@@ -1,4 +1,4 @@
-# get_datetime
-use it to get date and time string of server.
+# get_branch_str
+use it to get marlin fw branch string.
 
 

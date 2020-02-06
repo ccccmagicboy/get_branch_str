@@ -12,11 +12,11 @@
 SCRIPT=$(readlink -f "$0")
 # Absolute path this script is in, thus /home/user/bin
 SCRIPTPATH=$(dirname "$SCRIPT")
-echo $SCRIPTPATH
+#echo $SCRIPTPATH
 
 python -m pip install --upgrade pip
-pip install -U pytz
-echo $(pwd)
+#pip install -U pytz
+#echo $(pwd)
 python $SCRIPTPATH/action.py
 
 #echo bye bye!
